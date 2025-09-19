@@ -711,12 +711,12 @@
 
         // Fake Order Notifications
         const customers = [
-            { name: "Andi", profession: "Pegawai Bank", location: "Jakarta" },
-            { name: "Budi", profession: "Wiraswasta", location: "Bandung" },
-            { name: "Citra", profession: "Dokter", location: "Surabaya" },
-            { name: "Dewi", profession: "Guru", location: "Yogyakarta" },
-            { name: "Eko", profession: "Programmer", location: "Medan" },
-            { name: "Fitri", profession: "Desainer", location: "Denpasar" }
+            { name: "Andi", location: "Jakarta" },
+            { name: "Budi", location: "Bandung" },
+            { name: "Citra", location: "Surabaya" },
+            { name: "Dewi", location: "Yogyakarta" },
+            { name: "Eko", location: "Medan" },
+            { name: "Fitri", location: "Denpasar" }
         ];
 
         const avatarColors = [
@@ -735,7 +735,7 @@
             const colorClass = avatarColors[randomIndex];
             const initial = customer.name.charAt(0).toUpperCase();
             
-            document.getElementById('customerName').textContent = `${customer.name} - ${customer.profession}`;
+            document.getElementById('customerName').textContent = `${customer.name}`;
             const avatarElement = document.getElementById('avatar');
             avatarElement.textContent = initial;
             avatarElement.className = `w-10 h-10 rounded-full mr-3 flex items-center justify-center text-white font-bold ${colorClass}`;
